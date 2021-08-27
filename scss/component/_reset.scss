@@ -1,0 +1,54 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    --color-body: hsl(250, 6%, 15%);
+    --color-primary: hsl(250, 10%, 100%);
+    --color-primary-alt: hsl(250, 20%, 90%);
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    line-height: unset;
+    padding: 0;
+}
+
+a,
+ul,
+li,
+p {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+h1 {
+    font-size: $font_size_biger;
+}
+
+
+h2 {
+    font-size: $font_size_big;
+}
+
+h3 {
+    font-size: $font_size_h3;
+}
+
+@include medium-device {
+    h1 {
+        font-size: 2.5rem;
+    }
+}

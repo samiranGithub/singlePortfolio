@@ -1,0 +1,106 @@
+// Contact Section Start
+.mkr_map {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  > iframe {
+    flex: 2;
+    width: 100%;
+    height: 300px;
+  }
+
+  .mkr_map_data {
+    flex: 1;
+    align-self: flex-start;
+
+    > ul {
+      > li {
+        text-align: left;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+.mkr_contact_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  transition: all 0.6s linear;
+  padding: 2rem;
+
+  > input {
+    width: 100%;
+    margin: 0 0 1.3rem 0;
+    padding: 0.6rem 0.5rem;
+    background: transparent;
+    color: $color_light;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+
+    &::placeholder {
+      color: $color_light;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+
+    &:focus {
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 1);
+    }
+  }
+  > textarea {
+    width: 100%;
+    // margin: 0 0 1.3rem 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    color: $color_light;
+    padding: 0.6rem 0.5rem;
+
+    &::placeholder {
+      color: $color_light;
+      font-style: italic;
+      letter-spacing: 1px;
+    }
+
+    &:focus {
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 1);
+    }
+  }
+
+  > .mkr_contact_submit_btn {
+    align-self: flex-start;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 1.2rem 3rem;
+    font-size: 1rem;
+    font-style: italic;
+    transition: all 0.6s ease;
+    outline: none;
+    border: none;
+
+    &:hover {
+      letter-spacing: 2px;
+    }
+  }
+}
+
+.show_alert {
+  animation: alertz 5s;
+}
+
+@keyframes alertz {
+  0% {
+    visibility: unset;
+  }
+  100% {
+    visibility: hidden;
+  }
+}

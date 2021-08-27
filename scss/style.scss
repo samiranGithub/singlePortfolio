@@ -1,0 +1,26 @@
+@import "partials/mixin";
+@import "partials/variable";
+
+
+// section scss files......
+@import "component/reset";
+
+@import "component/mkr_reusableClass";
+
+@import "component/body";
+
+@import "component/modal-box";
+
+@import "component/leftSideBar";
+
+@import "component/rightSideBar";
+
+@import "component/home";
+
+@import "component/about";
+
+@import "component/portfolio";
+
+@import "component/blogs";
+
+@import "component/contact";

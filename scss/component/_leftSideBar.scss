@@ -1,0 +1,171 @@
+.mkr_left_section {
+  background-color: $color_dark;
+  height: 100vh;
+  width: 25%;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.mkr_left_inner {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mkr_logo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.1rem 0;
+  flex: 1;
+  > img {
+    width: 50%;
+    height: auto;
+  }
+
+  &:hover {
+    color: orange;
+  }
+}
+
+.mkr_nav_menu_btn {
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.mkr_mobile_menu {
+  width: 40px;
+  height: 40px;
+  .bars {
+    width: 76%;
+    background-color: white;
+    height: 2px;
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease-in-out;
+
+
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      background-color: white;
+      height: 2px;
+      position: absolute;
+      transition: all 0.6s ease-in-out;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      bottom: -8px;
+    }
+  }
+}
+
+.mkr_mobile_menu.active {
+  .bars {
+    background-color: transparent;
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    &::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.mkr_navbar_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+}
+
+.copy_right_text {
+  margin-top: 2.5rem;
+}
+
+.mkr_navbar_ul .nav_items {
+  cursor: pointer;
+  margin: 0.8rem 0;
+  text-align: center;
+}
+
+.mkr_navbar_ul .nav_items.active {
+  color: $color_hotpink;
+}
+
+.copy_right_text {
+  line-height: 2rem;
+}
+
+@include medium-device {
+  .mkr_left_section {
+    height: auto;
+    width: 100%;
+    left: 0;
+  }
+
+  .mkr_left_inner {
+    position: relative;
+  }
+
+  .mkr_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0.6rem;
+  }
+
+  
+.mkr_logo {
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem 0;
+  justify-content: flex-start;
+  
+  > img {
+    width: 176px;
+    height: 40px;
+  }
+}
+
+  .mkr_nav_menu_btn {
+    display: flex;
+  }
+
+  .mkr_navbar_menu {
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .copy_right_text {
+    display: none;
+  }
+}

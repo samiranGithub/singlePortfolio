@@ -1,0 +1,157 @@
+.mkr_portf_photos {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.mkr_portf_photos_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0.4rem;
+  transition: all 0.6s ease-in-out;
+  background-color: #6a6a6a;
+  padding: 0.6rem;
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.mkr_portf_photos_info {
+  padding-top: 0.6rem;
+  > h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.mkr_portf_btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+
+  .portf_button {
+    padding: 0.3rem 1rem;
+    border: 1px solid gray;
+    background-color: $color_light;
+    color: $color_dark;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0.6rem 0.6rem;
+
+    &.active {
+      background-color: $color_dark;
+      color: $color_light;
+    }
+  }
+}
+
+// .show {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+@include small_device {
+  .mkr_portf_photos {
+    grid-template-columns: auto;
+  }
+
+  .mkr_portf_btn {
+    justify-content: center;
+  }
+}
+
+@include smallToMedium_device {
+  .mkr_portf_photos {
+    grid-template-columns: auto auto;
+  }
+
+  .mkr_portf_btn {
+    justify-content: center;
+  }
+}
+
+// Portfolio Modals
+.modal_box_portf {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  background-color: $color_dark;
+  width: 100%;
+  transition: top 0.3s ease-in-out;
+  z-index: 9999;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+.modal_box_portf.active {
+  display: block;
+}
+
+.modal_box_inner_portf {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.close_modal_portf {
+  position: fixed;
+  right: 2%;
+  top: 0;
+  margin-left: 40px;
+  z-index: 111111;
+  font-size: 2rem;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: $color_light;
+  border: 1px solid violet;
+  color: $color_dark;
+
+  &:hover {
+    background-color: $color_dark;
+    color: $color_light;
+  }
+}
+
+.modal_box_wrap_portf {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem 2rem;
+  height: 80vh;
+  overflow: auto;
+  outline: none;
+}
+
+.modal_portf_img {
+  width: 100%;
+  min-height: 90vh;
+
+  > img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+
+// Mobile Device..
+@mixin  small_device {
+    @media (max-width: 577px) {
+        @content;
+    }
+}
+
+// Tablet Device..
+@mixin  medium_device {
+    @media (max-width: 769px) {
+        @content;
+    }
+}
+
+// Mobile to Tablet Breakpoint...
+@mixin smallToMedium_device {
+    @media (min-width: 577px) and (max-width: 769px) {
+        @content;
+    }
+}

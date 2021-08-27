@@ -1,0 +1,32 @@
+// RIGHT SIDE BAR SECTION START
+.mkr_right_section {
+  min-height: 100vh;
+  width: auto;
+  margin-left: 25%;
+  box-sizing: border-box;
+}
+
+.panel_item {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: transform .3s ease .3s,opacity 0s ease .3s;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translate3d(5%, 0, 0);
+}
+
+.panel_item.active {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@include medium_device {
+  .mkr_right_section {
+    margin-left: 0;
+    // padding-top: 4.3rem;
+    box-sizing: border-box;
+  }
+}
